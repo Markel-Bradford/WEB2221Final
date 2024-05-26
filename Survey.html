@@ -6,7 +6,8 @@
     <meta name="description" content="A webpage about Super Smash Bros. Melee, a game that transcends time. ">
     <meta name="keywords" content="Melee, Smash Bros, Super Smash Bros, GameCube, Nintendo">
     <meta name="author" content="Markel Bradford">
-    <link rel="stylesheet" href="FinalProject.css">
+    <link rel="stylesheet" href="FinalProject.css">              
+    <script type="text/javascript" src="toggleDropdown.js"></script>
     <title>Survey</title>
 </head>
 <body>
@@ -17,8 +18,9 @@
             ><i>Super Smash Bros. Melee</i></a>
             
             <div class="dropdown">
-              <button class="drop-menu">Menu</button>
-            <ul class="nav-menu">
+
+              <button class="drop-menu" onclick="toggleDropdown()">Menu</button>
+            <ul class="nav-menu" id="nav-menu">
               <li class="nav-items">
                 <a class="nav-links" href="BradfordMarkelFinalProject.html">History</a>
               </li>

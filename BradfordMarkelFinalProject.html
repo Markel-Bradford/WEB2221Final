@@ -7,6 +7,7 @@
     <meta name="keywords" content="Melee, Smash Bros, Super Smash Bros, GameCube, Nintendo">
     <meta name="author" content="Markel Bradford">
     <link rel="stylesheet" href="FinalProject.css">
+    <script type="text/javascript" src="toggleDropdown.js"></script>
     <script>        
       function welcome() {
         var userName = prompt("Please enter your name");
@@ -28,8 +29,9 @@
           ><i>Super Smash Bros. Melee</i></a>
           
           <div class="dropdown">
-            <button class="drop-menu">Menu</button>
-          <ul class="nav-menu">
+
+            <button class="drop-menu" onclick="toggleDropdown()">Menu</button>
+          <ul class="nav-menu" id="nav-menu">
             <li class="nav-items">
               <a class="nav-links" href="BradfordMarkelFinalProject.html">History</a>
             </li>
