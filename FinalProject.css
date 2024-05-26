@@ -137,7 +137,7 @@ header {
         position: absolute;
         top: 0;
         left: 0;
-        transform: translate(30%, 0%);
+        transform: translate(40%, 0%);
     }
 
     .nav-menu {
@@ -584,7 +584,7 @@ select{
 /*Responsive guessing game styles*/
 @media screen and (max-width: 600px) {
     .div1 {
-        width: 80%;
+        width: 60%;
         height: 60%;
         padding: 0 10px 50px 10px ;
         justify-content: center;
