@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="Melee, Smash Bros, Super Smash Bros, GameCube, Nintendo">
+    <meta name="author" content="Markel Bradford">
+    <link rel="stylesheet" href="FinalProject.css">
+    <title>Characters</title>
+</head>
+<body>
+  <header>
+    <nav>
+    <div class="navbar-container">
+      <a class="logo" href="BradfordMarkelFinalProject.html"
+        ><i>Super Smash Bros. Melee</i></a>
+        
+        <div class="dropdown">
+          <p class="drop-menu">Menu</p>
+        <ul class="nav-menu">
+          <li class="nav-items">
+            <a class="nav-links" href="BradfordMarkelFinalProject.html">History</a>
+          </li>
+          <li class="nav-items">
+            <a class="nav-links" href="MajorTournaments.html">Tournaments</a>
+          </li>
+          <li class="nav-items">
+            <a href="Characters.html" class="nav-links">Characters</a>
+          </li>
+          <li class="nav-items">
+            <a class="nav-links" href="Survey.html">Survey</a>
+          </li>
+          <li class="nav-items">
+            <a href="Surprise.html" class="nav-links">Surprise</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    </nav>
+    <hr>
+</header>
+      <script>
+        function allowDrop(ev)
+          {
+            ev.preventDefault();
+          }
+        
+        function drag(ev)
+          {
+            ev.dataTransfer.setData("Text",ev.target.id);
+          }
+        
+        function drop(ev)
+          {
+            var data=ev.dataTransfer.getData("Text");
+            ev.target.appendChild(document.getElementById(data));
+            ev.preventDefault();
+          }
+
+          function newWindow() {
+                open('answerkey.png','dynamicWindow', 'location=1')
+            }
+        </script>
+      <aside id="aside1">
+        <img src="falco.png" alt="Falco from Super Smash Bros Melee" id="asideimg1">
+      </aside>
+        <main>
+            <h1>Can you match the characters with their names?</h1>
+            <p id="game-prompt">Drag and drop the characters into the boxes to match them with their names.
+                Once complete, you can open the answer key and see if you know your Smash Bros. Melee Characters!
+                Good luck!
+            </p>
+            <div class="guessing-game">
+              <div class="guessing-column">
+                <h2 class="char-name">
+                    Captain Falcon
+                </h2>
+                <div class="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+              </div>
+                  <img src="guessfalco.png" alt="Who am I?" class="char-to-guess" id="drag1" draggable="true" ondragstart="drag(event) ">
+                </div>
+            <div class="guessing-game">
+              <div class="guessing-column">
+                  <h2 class="char-name">
+                    Fox
+                </h2>
+                <div class="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                  </div>
+                  <img src="cflaconGuess.png" alt="Who am I?" class="char-to-guess" id="drag2" draggable="true" ondragstart="drag(event) ">
+            </div>
+            <div class="guessing-game">
+              <div class="guessing-column">
+                <h2 class="char-name">
+                  Falco
+              </h2>
+              <div class="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                         </div>
+                         <img src="jigglypuffGuess.png" alt="Who am I?" class="char-to-guess2" id="drag3" draggable="true" ondragstart="drag(event) ">
+
+         </div>
+          <div class="guessing-game">
+            <div class="guessing-column">
+            <h2 class="char-name">
+              Jigglypuff
+          </h2>
+          <div class="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            </div>
+            <img src="foxGuess.png" alt="Who am I?" class="char-to-guess2" id="drag4" draggable="true" ondragstart="drag(event) ">
+      </div>
+      <button type="button" onclick="newWindow()" class="answer-key">Answer Key</button>
+        </main>
+      <aside id="aside2">
+        <img src="Fox.webp" alt="Fox McCloud" id="asideimg2">
+      </aside>
+    <footer>
+        <hr>
+        <p class="footer-text">&copy; 2024 Markel Bradford</p>
+    </footer>
+    
+</body>
+</html>

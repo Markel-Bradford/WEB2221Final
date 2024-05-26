@@ -1,0 +1,629 @@
+html {
+    scroll-behavior: smooth;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    margin: 0;
+    background: linear-gradient(90deg, #333 0%, #000 100%);
+    color: #fff;
+}
+
+/*Header and navbar styles*/
+header {
+    position: fixed;
+    height: 90px;
+    top: 0;
+    width: 100%;
+    background: linear-gradient(90deg, #333 0%, #000 100%);
+    z-index: 999; 
+    margin-bottom: 125px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    top: 0;
+    font-weight: 600;
+    font-family: "Audiowide";
+    position: sticky;  
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    max-width: 1500px;
+    margin: 0 auto;
+}
+
+.logo {
+    display: flex;
+    font-size: 24px;
+    align-items: center;
+    color: #fff;
+    text-decoration: none;
+    padding-top: 5px;
+    padding-left: 30px;
+    transition: 1.5s;
+}
+
+.dropdown {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.drop-menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    color: #fff;
+    cursor: pointer;
+    margin-top: 50px;
+}
+
+.drop-menu:hover {
+    color: red;
+}
+
+.nav-menu {
+    display: none;
+    position: absolute;
+    top: 82%; /* Position the dropdown below the .drop-menu */
+    list-style: none;
+    text-align: center;
+    min-width: 200px;
+    z-index: 1;
+    background-color: #fff;
+    color: #000;
+    padding: 0;
+    margin: 8px 0 0 0;
+    border: 1px solid #ccc;
+}
+
+.dropdown:hover .nav-menu {
+    display: block;
+}
+
+.nav-links {
+    display: block;
+    align-items: center;
+    color: #000;
+    font-size: 20px;
+    text-decoration: none;
+    padding: 1rem; 
+    height: 100%;
+    background: #fff;
+}
+
+.logo:hover {
+    color: orangered;
+    transition: 1.8s;
+    transform: rotateY(360deg);
+}
+
+.nav-links:hover {
+    color: #000;
+    border: solid 2px orangered;
+    background: #f9f9f9;
+}
+
+.nav-items {
+    border-bottom: 1px solid red;
+}
+
+.nav-items:last-child {
+    border-bottom: none;
+}
+
+@media screen and (max-width: 600px) {
+    .logo {
+        display: none;
+    }
+    
+    .dropdown {
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: translate(15%, -20%);
+    }
+
+    .nav-menu {
+        margin-top: 8px;
+    }
+    
+}
+
+#aside1 {
+    top: 0;
+    left: 0;
+    width: 280px;
+    border-right: 2px solid #fff;
+}
+
+aside {
+    height: 100vh;
+    position: fixed; 
+    margin-top: 90px;
+    z-index: -1;
+}
+
+#aside2 {
+    border-left: 2px solid #fff;
+    top: 0;
+    right: 0;
+    width: 260px;  
+    padding-left: 20px; 
+}
+
+#aside1, #aside2 {
+    animation: 3s fadein;
+}
+
+#asideimg1, #asideimg2 {
+    margin-top: 225px;
+}
+
+@media screen and (max-width:1850px) {
+    #aside1, #aside2 {
+    display: none;
+    }
+
+}
+
+h1 {
+    position: relative;
+    text-align: center;
+    margin-top: 125px;
+    margin-bottom: 50px;
+    z-index: -1;
+    animation: 3s fadein;
+    padding: 0 20px;
+}
+
+#username {
+    margin-top: 125px;
+}
+
+#top {
+    margin-top: 0px;
+}
+
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+h2 {
+    margin: 20px auto;
+    text-align: left;
+    max-width: 1300px;
+    min-width: 300px;
+    padding: 0 20px;
+}
+
+h3 {
+    max-width: 1300px;
+    min-width: 300px;
+    margin: -20px auto 0 auto;
+    text-align: left;
+    padding: 0 20px;
+}
+
+p {
+    margin: 0 auto;
+    margin-bottom: 50px;
+    max-width: 1300px;
+    min-width: 300px;
+    font-size: 20px;
+    line-height: 2rem;
+    padding: 0 20px;
+}
+
+.figlink {
+    text-decoration: none;
+    font-weight: 600;
+    color: skyblue;
+}
+
+.figlink:hover {
+    text-decoration: underline;
+}
+
+.titlelink {
+    color: #fff;
+    text-decoration: none;
+}
+
+.titlelink:hover {
+    color: skyblue;
+}
+
+img {
+    margin: 20px auto;
+    display: flex;
+    width: 70%;
+    border-radius: 8px;
+}
+
+video {
+    width: 70%;
+    display: flex;
+    margin: 0 auto;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    z-index: -1;
+}
+
+figcaption {
+    text-align: center;
+}
+
+h4 {
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+#emu-link {
+    border: 1px solid black;
+    color: black;
+    padding: 4px 4px 6px 4px;
+    border-radius: 6px;
+    background: #aaa;
+    text-decoration: none;
+}
+
+#emu-link:hover {
+    color: #fff;
+    border: 1px solid black;
+    padding: 4px 4px 6px 4px;
+    border-radius: 6px;
+}
+
+footer {
+    background: linear-gradient(90deg, #333 0%, #000 100%);
+    z-index: 999;
+    height: 80px;
+    margin-top: 50px;
+}
+
+.footer-text {
+    text-align: center;
+    font-size: 14px;
+    margin: 20px auto;
+}
+
+/*Tournaments*/
+.events {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    max-width: 1300px;
+}
+
+.tournamentLogos {
+    width: 150px;
+    height: 50px;
+    margin-bottom: 80px;
+    margin-right: 20px;
+}
+
+.tournamentLogos2 {
+    width: 120px;
+    margin-bottom: 50px;
+    margin-right: 20px;
+}
+.tournamentLogosGOML {
+    width: 100px;
+    margin-right: 20px;
+}
+
+.tournamentLogosLTC {
+    width: 80px;
+    margin-bottom: 40px;
+    margin-right: 20px;
+}
+
+.tournamentLogosTO {
+    width: 120px;
+    margin-right: 20px;
+}
+
+article {
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+/* Responsive styles for majpr tournamnets*/
+@media screen and (max-width: 600px) {
+    .events {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .eventTitle, .eventDate, .prizePool {
+        text-align: center;
+    }
+
+    #ltcVideo {
+        width: 100%;
+    }
+
+    .tournamentPhotos {
+        width: 100%;
+    }
+
+    .tournamentArticle {
+        margin-bottom: 100px;
+    }
+
+    .tournamentLogos, .tournamentLogos2,
+    .tournamentLogosGOML, .tournamentLogosLTC,
+    .tournamentLogosTO {
+        margin-top: 0;
+        margin-bottom: 50px;
+    }
+}
+
+/*Survey*/
+
+form {
+    margin: 50px auto;
+    padding: 50px 20px;
+    max-width: 600px;
+    min-width: 300px;
+}
+
+.surveyTitle {
+    text-align: center;
+
+}
+
+.form-group {
+    padding: 15px 0;
+}
+
+label {
+    font-size: 22px;
+}
+
+#name,
+#email {
+    width: 98.5%;
+    line-height: 2rem;
+    border: 2px #fff solid;
+    border-radius: 8px;
+    font-size: 18px;
+    padding: 0 5px;
+    margin-top: 10px;
+}
+
+.form-group-dob {
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+#dob, #tel {
+    text-align: center;
+    line-height: 1.5rem;
+    width: 30%;
+    border: 2px #fff solid;
+    border-radius: 8px;
+    font-size: 18px;
+    padding: 0 5px;
+}
+
+.cboxlabel, .radiolabel {
+    display: flex;
+    font-size: 20px;
+    margin-left: 20px;
+    height: 2rem;
+}
+
+.cbox, .radio {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 20px;
+    height: 1.2rem;
+}
+
+#rating-scale {
+    margin-top: 40px;
+    margin-bottom: 10px;
+}
+
+#rating {
+    width: 90%;
+    margin: 0 10px;
+    vertical-align: middle;
+}
+
+textarea {
+    width: 99%;
+    border-radius: 8px;
+    font-size: 20px;
+    padding: 5px 10px;
+    margin: 0;
+}
+
+.form-detail {
+    font-size: 22px;
+    text-align: left;
+    margin-left: -20px;
+    margin-bottom: 20px;
+}
+
+.button-container {
+    display: flex;
+}
+
+#submit, #reset {
+    background: transparent;
+    color: #fff;
+    border: 2px solid #fff;
+    font-size: 20px;
+    margin: 20px auto 0 auto;
+    width: 40%;
+    height: 40px;
+    border-radius: 8px;
+    padding: 5px 10px;
+}
+
+#submit:hover {
+    background-color: green;
+}
+
+#reset:hover {
+    background: orange;
+}
+
+select{
+    width: 98.5%;
+    height: 2rem;
+    margin-top: 10px;
+    border-radius: 8px;
+    font-size: 18px;
+}
+/*Responsive styles for survey*/
+@media screen and (max-width: 600px) {
+    form {
+        margin: 0 auto;
+        width: 320px;
+    }
+
+    label {
+        font-size: 20px;
+    }
+
+    #dob, #tel {
+        width: 40%;
+    }
+
+    #rating {
+        width: 80%;
+    }
+
+    textarea, #name, #email {
+        width: 95%;
+    }
+}
+
+/*Drag and Drop*/
+.div1{
+    display: flex;
+    width: 320px;
+    height: 160px;
+    padding: 00 10px 15px 10px ;
+    border: #fff 2px dashed;
+    margin: 0 auto;
+}
+
+/*Characters styles*/
+
+.guessing-game {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto;
+    max-width: 1000px;
+}
+
+.char-to-guess {
+    width: 300px;
+    height: 150px;
+}
+
+.char-to-guess2 {
+    width: 300px;
+    height: 150px;
+}
+
+.answer-key {
+    display: flex;
+    margin: 100px auto;
+    font-size: 28px;
+    background: transparent;
+    color: #fff;
+    padding: 5px 10px;
+    border: 2px solid white;
+}
+
+.answer-key:hover {
+    background: #fff;
+    color: green;
+    border: 2px solid green;
+    transition: .4s;
+}
+
+/*Responsive guessing game styles*/
+@media screen and (max-width: 600px) {
+    .div1 {
+        width: 160px;
+        height: 80px;
+        margin-left: 20px;
+    }
+
+    .char-to-guess {
+        margin-top: 75px;
+        width: 20%;
+        height: 75px;
+    }
+
+    .char-to-guess2 {
+        margin-top: 75px;
+        width: 20%;
+        height: 75px;
+    }
+}
+
+
+/*Surprise Styles*/
+#surprise-phrase {
+    text-align: center;
+    margin-top: 100px;
+}
+
+#surprise-desc {
+    margin: 25px auto;
+    text-align: center;
+}
+
+#surprise-img {
+    display: flex;
+    margin: 0 auto;
+    width: 60%;
+    justify-content: center;
+    align-items: center;
+}
+
+#btnDiv {
+    display: flex;
+    max-width: 800px;
+    margin: 0 auto;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.btn {
+    padding: 10px 20px;
+    background: transparent;
+    border: #fff 2px solid;
+    color: #fff;
+    font-size: 20px;
+    margin-bottom: 150px;
+}

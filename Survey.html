@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A webpage about Super Smash Bros. Melee, a game that transcends time. ">
+    <meta name="keywords" content="Melee, Smash Bros, Super Smash Bros, GameCube, Nintendo">
+    <meta name="author" content="Markel Bradford">
+    <link rel="stylesheet" href="FinalProject.css">
+    <title>Survey</title>
+</head>
+<body>
+    <header>
+        <nav>
+        <div class="navbar-container">
+          <a class="logo" href="BradfordMarkelFinalProject.html"
+            ><i>Super Smash Bros. Melee</i></a>
+            
+            <div class="dropdown">
+              <p class="drop-menu">Menu</p>
+            <ul class="nav-menu">
+              <li class="nav-items">
+                <a class="nav-links" href="BradfordMarkelFinalProject.html">History</a>
+              </li>
+              <li class="nav-items">
+                <a class="nav-links" href="MajorTournaments.html">Tournaments</a>
+              </li>
+              <li class="nav-items">
+                <a href="Characters.html" class="nav-links">Characters</a>
+              </li>
+              <li class="nav-items">
+                <a class="nav-links" href="Survey.html">Survey</a>
+              </li>
+              <li class="nav-items">
+                <a href="Surprise.html" class="nav-links">Surprise</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        </nav>
+        <hr>
+    </header>
+    <aside id="aside1">
+        <img src="falco.png" alt="Falco from Super Smash Bros Melee" id="asideimg1">
+      </aside>
+    <main>
+      <h1>Interest Survey</h1>
+      <h2 class="surveyTitle">What do you think of Super Smash Bros. Melee?</h2>
+        <form method="post" autocomplete="on">
+          <div class="form-group">
+          <label for="name" class="info-labels">Name</label>
+          <input autofocus type="text" name="name" id="name" placeholder="Captain Falcon" required>
+        </div>
+        <div class="form-group">
+          <label for="email" class="info-labels dob">Email</label>
+          <input type="email" name="email" id="email" placeholder="falconpuncher94@gmail.com" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required>
+        </div>
+        <div class="form-group-dob">
+          <label for="tel" class="info-labels">Phone Number</label>
+          <input type="tel" name="tel" id="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="123-456-7890" required>
+        </div>
+        <div class="form-group-dob">
+          <label for="dob" class="info-labels">Date of Birth</label>
+          <input type="date" name="dob" id="dob" required>
+        </div>
+        <div class="form-group">
+          <p class="form-detail">Would you be interested in learning more?</p>
+          <label for="yes" class="radiolabel">
+            <input type="radio" name="choice" id="yes" class="radio" required>
+            Yes, send me some info!
+          </label>
+          
+          <label for="no" class="radiolabel">
+            <input type="radio" name="choice" id="no" class="radio" >No, thanks.
+          </label>
+          
+        </div>
+        <div class="form-group">
+          <p class="form-detail">What did you find the most interesting? (Select all that apply)</p>
+          <label for="history" class="cboxlabel">
+            <input type="checkbox" name="history" id="history" class="cbox">The History
+          </label>
+          
+          <label for="community" class="cboxlabel">
+            <input type="checkbox" name="community" id="community" class="cbox">The community
+          </label>
+          
+          <label for="gameplay" class="cboxlabel">
+            <input type="checkbox" name="gameplay" id="gameplay" class="cbox">
+            The gameplay
+          </label>
+          
+          <label for="competition" class="cboxlabel">
+            <input type="checkbox" name="competition" id="competition" class="cbox">
+            The competition
+          </label>
+          
+        </div>
+        <div class="form-group">
+          <label for="characters" class="info-labels">Which character do you think is the coolest?</label>
+          <select name="characters" id="characters" required>
+            <option disabled selected value>Choose your character</option>
+            <option value="Fox">Fox McCloud</option>
+            <option value="Falco">Falco Lombardi</option>
+            <option value="C-Falcon">Captain Falcon</option>
+            <option value="Jigglypuff">Jigglypuff</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="rating">How would you rate this website on a scale of 1 - 10?</label>
+          <p id="rating-scale">0<input type="range" name="rating" min="0" max="10" id="rating">10</p>
+        </div>
+        <div class="form-group">
+          <p class="form-detail">Would you care to share any feedback on the website?</p>
+          <label for="feedback"></label>
+          <textarea name="feedback" id="feedback" cols="30" rows="10" placeholder="(optional)"></textarea>
+        </div>
+        <div class="button-container">
+          <button type="submit" id="submit">Submit</button>
+          <button type="reset" id="reset">Reset</button>
+        </div>
+        </form>
+    </main>
+    <aside id="aside2">
+        <img src="Fox.webp" alt="Fox McCloud" id="asideimg2">
+      </aside>
+    <footer>
+        <hr>
+        <p class="footer-text">&copy; 2024 Markel Bradford</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="FinalProject.css">
+    <title>Surprise!</title>
+</head>
+<body>
+    <header>
+        <nav>
+        <div class="navbar-container">
+          <a class="logo" href="BradfordMarkelFinalProject.html"
+            ><i>Super Smash Bros. Melee</i></a>
+            
+            <div class="dropdown">
+              <p class="drop-menu">Menu</p>
+            <ul class="nav-menu">
+              <li class="nav-items">
+                <a class="nav-links" href="BradfordMarkelFinalProject.html">History</a>
+              </li>
+              <li class="nav-items">
+                <a class="nav-links" href="MajorTournaments.html">Tournaments</a>
+              </li>
+              <li class="nav-items">
+                <a href="Characters.html" class="nav-links">Characters</a>
+              </li>
+              <li class="nav-items">
+                <a class="nav-links" href="Survey.html">Survey</a>
+              </li>
+              <li class="nav-items">
+                <a href="Surprise.html" class="nav-links">Surprise</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        </nav>
+        <hr>
+    </header>
+      <aside id="aside1">
+          <img src="falco.png" alt="Falco from Super Smash Bros Melee" id="asideimg1">
+        </aside>
+
+        <div id="container">
+            <h1>Click for a fun surprise!</h1>
+            <h2 id="surprise-phrase"></h2>
+            <img id="surprise-img" src="showyamoves.gif" style="display: none;" alt="Captain Falcon in game taunt, Show your moves!">
+            <h3 id="surprise-desc"></h3>
+            <div id="btnDiv">
+                <button class="btn" onclick="getContent()">
+                    See surprise!
+                </button>
+                 
+                <button class="btn" onclick="remContent()">
+                    Remove surprise
+                </button>
+            </div>
+        </div>
+     
+        <script>
+            alert('Data stored in localStorage')
+            
+            var head = document.getElementById('surprise-phrase');
+            var img = document.getElementById('surprise-img')
+            var desc = document.getElementById("surprise-desc");
+            
+            function getContent() {
+                if (typeof (Storage) !== "undefined") {
+     
+                    // setItem() will set store the passed attribute
+                    // and value in localStorage
+                    localStorage.setItem('heading', 'SHOW YOUR MOVES!!');
+                    localStorage.setItem('image', 'showyamoves.gif')
+                    localStorage.setItem('description',
+                        'You just got taunted by Captain Falcon!');
+                     
+                    // This is the way of accessing the items 
+                    // stored in the storage 
+                    head.innerText = localStorage.heading;
+                    img.src = localStorage.image;
+                    img.style.display = "block"
+                    desc.innerText = localStorage.description;
+                }
+                else {
+                    head.innerText = 
+                        "Your browser does not support web storage API.";
+                }
+            }
+     
+            function remContent() {
+     
+                // removeItem() will remove the passed attribute
+                // and value from localStorage.
+                localStorage.removeItem('heading');
+                localStorage.removeItem('description');
+                localStorage.removeItem('image')
+                head.innerText = "";
+                img.src = ""
+                desc.innerText = "";
+            }
+        </script>
+
+        <aside id="aside2">
+            <img src="Fox.webp" alt="Fox McCloud" id="asideimg2">
+          </aside>
+        <footer>
+            <hr>
+            <p class="footer-text">&copy; 2024 Markel Bradford</p>
+        </footer>
+</body>
+</html>
