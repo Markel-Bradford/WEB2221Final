@@ -580,12 +580,14 @@ select{
 
     .char-to-guess {
         margin-top: 75px;
+        margin-right: 50px;
         width: 20%;
         height: 75px;
     }
 
     .char-to-guess2 {
         margin-top: 75px;
+         margin-right: 50px;
         width: 20%;
         height: 75px;
     }
