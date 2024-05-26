@@ -260,6 +260,14 @@ p {
     padding: 0 20px;
 }
 
+h4 {
+    padding: 0 20px;
+    line-height: 2;
+    font-size: 14px;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
 .figlink {
     text-decoration: none;
     font-weight: 600;
@@ -299,15 +307,10 @@ figcaption {
     text-align: center;
 }
 
-h4 {
-    text-align: center;
-    padding-bottom: 20px;
-}
-
 #emu-link {
     border: 1px solid black;
     color: black;
-    padding: 4px 4px 6px 4px;
+    padding: 2px 4px 3px 4px;
     border-radius: 6px;
     background: #aaa;
     text-decoration: none;
@@ -321,10 +324,12 @@ h4 {
 }
 
 footer {
-    background: linear-gradient(90deg, #333 0%, #000 100%);
+    background: transparent;
     z-index: 999;
-    height: 80px;
-    margin-top: 50px;
+    height: 60px;
+    margin: 50px auto 0 auto;
+    max-width: 1340px;
+
 }
 
 .footer-text {
@@ -670,4 +675,14 @@ select{
     color: #fff;
     font-size: 20px;
     margin-bottom: 150px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    border: 2px solid green;
+    transition: 1s;
+}
+.rmv:hover {
+    border: 2px solid red;
+    transition: 1s;
 }

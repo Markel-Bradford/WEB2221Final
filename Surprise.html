@@ -3,8 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="FinalProject.css">
-    <script type="text/javascript" src="toggleDropdown.js"></script>
+    <meta name="description" content="A webpage about Super Smash Bros. Melee, a game that transcends time. ">
+    <meta name="keywords" content="Melee, Smash Bros, Super Smash Bros, GameCube, Nintendo">
+    <meta name="author" content="Markel Bradford">
+    <link rel="stylesheet" href="FinalProject.css">       
+    <script>
+      alert('Data stored in localStorage')
+    </script>
     <title>Surprise!</title>
 </head>
 <body>
@@ -33,6 +38,9 @@
               <li class="nav-items">
                 <a href="Surprise.html" class="nav-links">Surprise</a>
               </li>
+              <li class="nav-items">
+                <a href="ThanksForVisiting.html" class="nav-links">Thanks</a>
+              </li>
             </ul>
           </div>
         </div>
@@ -42,7 +50,6 @@
       <aside id="aside1">
           <img src="falco.png" alt="Falco from Super Smash Bros Melee" id="asideimg1">
         </aside>
-
         <div id="container">
             <h1>Click for a fun surprise!</h1>
             <h2 id="surprise-phrase"></h2>
@@ -52,61 +59,16 @@
                 <button class="btn" onclick="getContent()">
                     See surprise!
                 </button>
-                 
-                <button class="btn" onclick="remContent()">
+                <button class="btn rmv" onclick="remContent()">
                     Remove surprise
                 </button>
             </div>
         </div>
-     
-        <script>
-            alert('Data stored in localStorage')
-            
-            var head = document.getElementById('surprise-phrase');
-            var img = document.getElementById('surprise-img')
-            var desc = document.getElementById("surprise-desc");
-            
-            function getContent() {
-                if (typeof (Storage) !== "undefined") {
-     
-                    // setItem() will set store the passed attribute
-                    // and value in localStorage
-                    localStorage.setItem('heading', 'SHOW YOUR MOVES!!');
-                    localStorage.setItem('image', 'showyamoves.gif')
-                    localStorage.setItem('description',
-                        'You just got taunted by Captain Falcon!');
-                     
-                    // This is the way of accessing the items 
-                    // stored in the storage 
-                    head.innerText = localStorage.heading;
-                    img.src = localStorage.image;
-                    img.style.display = "block"
-                    desc.innerText = localStorage.description;
-                }
-                else {
-                    head.innerText = 
-                        "Your browser does not support web storage API.";
-                }
-            }
-     
-            function remContent() {
-     
-                // removeItem() will remove the passed attribute
-                // and value from localStorage.
-                localStorage.removeItem('heading');
-                localStorage.removeItem('description');
-                localStorage.removeItem('image')
-                head.innerText = "";
-                img.src = ""
-                desc.innerText = "";
-            }
-        </script>
-
+        <script src="scripts.js"></script> 
         <aside id="aside2">
             <img src="Fox.webp" alt="Fox McCloud" id="asideimg2">
           </aside>
         <footer>
-            <hr>
             <p class="footer-text">&copy; 2024 Markel Bradford</p>
         </footer>
 </body>
